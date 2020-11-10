@@ -13,8 +13,14 @@ In this code pattern, we will be using energy price dataset and analyze the data
 
 # Flow
 
-TBD
+![Architecture](doc/source/images/architecture.png)
 
+
+1. User loads Jupyter notebook to IBM Cloud Pak for Data.
+2. User connect to Netezza using NZPY connector.
+3. User loads and analyzes data from Netezza Performance Server.
+4. Netezza creates models using in-database analytics functions.
+5. User forecasts and predicts energy price using the model.
 
 ## Included components
 
