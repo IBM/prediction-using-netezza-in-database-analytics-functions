@@ -88,7 +88,7 @@ Upload `energy_price.csv` from the cloned repository folder by going to `doc/sou
 * Select `From URL` tab and fill in the name and provide the `Notebook URL` as below, and click `Create notebook`.
 
 ```bash
-https://raw.github.com/
+https://raw.githubusercontent.com/IBM/prediction-using-netezza-in-database-analytics-functions/main/doc/source/notebooks/PredictionUsingINZAfunctions.ipynb
 ```
 
 ### 5. Install NZPY
@@ -237,7 +237,11 @@ pd.read_sql("select * from v_nza_models;",con=con)
 ```
 ![Timeseries model](doc/source/images/model-1.png)
 
+The NZA_META_<model_name>_FORECAST table holds forecast values. The table contains one line for each time series and point in time for which a forecast has been made, with the following columns. The following function gives the forecasting results applied to the timeseries dataset.
 
+`pd.read_sql("select * from NZA_META_PRICE_TIME_FORECAST;", con=con)`
+
+![forecast results](doc/source/images/forecast-results.png)
 
 # License
 
