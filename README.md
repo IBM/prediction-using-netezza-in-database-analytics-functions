@@ -29,6 +29,7 @@ In this code pattern, we will be using energy price dataset and analyze the data
 * [Jupyter Notebook](https://jupyter.org/): An open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text.
 
 ## Steps
+1. [Clone the repo](#1-clone-the-repo)
 1. [Create a new project in CP4D](#1-create-a-new-project-in-cp4d)
 1. [Add connection to Netezza server](#2-add-connection-to-netezza-server)
 1. [Upload data assets](#3-upload-data-assets)
@@ -40,7 +41,14 @@ In this code pattern, we will be using energy price dataset and analyze the data
 1. [Analyze energy price data](#9-analyze-energy-price-data)
 1. [Create machine learning model using timeseries algorithm](#10-create-machine-learning-model-using-timeseries-algorithm)
 
-### 1. Create a new project in CP4D
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/IBM/prediction-using-netezza-in-database-analytics-functions.git
+
+```
+
+### 2. Create a new project in CP4D
 
 * Log into IBM Cloud Pak for Data and create a new project, by selecting `Projects` from hamburger menu and clicking `New Project +`.
 
@@ -55,7 +63,7 @@ Then, choose `Analytics project`, and select `Create empty project`, provide the
 ![Project created](doc/source/images/project-created.png)
 
 
-### 2. Add connection to Netezza server
+### 3. Add connection to Netezza server
 
 There are two ways you can add connection to the notebook.  Use one of the ways to add connection to NPS.
 
@@ -79,13 +87,13 @@ There are two ways you can add connection to the notebook.  Use one of the ways 
 
 >NOTE: Save the name of the connection for later use.
 
-### 3. Upload data assets
+### 4. Upload data assets
 
 Upload `energy_price.csv` from the cloned repository folder by going to `doc/source/data`. In the project home page, on the `Assets` tab, click the data icon, and browse to upload the file. You will have to unzip the data locally first before you upload.
 
 ![Upload data assets](doc/source/images/upload-data-assets.png)
 
-### 4. Load notebook to your project
+### 5. Load notebook to your project
 
 * From the project page, click `Add to project +`, and select `notebook` from the options:
 
@@ -97,13 +105,13 @@ Upload `energy_price.csv` from the cloned repository folder by going to `doc/sou
 https://raw.githubusercontent.com/IBM/prediction-using-netezza-in-database-analytics-functions/main/doc/source/notebooks/PredictionUsingINZAfunctions.ipynb
 ```
 
-### 5. Install NZPY
+### 6. Install NZPY
 
 Run the cell that contains `pip install nzpy` which is the only pre-requisite for this notebook. `nzpy` lets us connect to the server and allow us to run DDL and DML SQLs.
 
 ![add notebook](doc/source/images/install-prereq.png)
 
-### 6. Configure NPS connection in notebook
+### 7. Configure NPS connection in notebook
 
 * Open the notebook in edit mode, and in the cell with title `Connecting to the database`, provide the name of the connection that you created earlier in step 2.
 
@@ -130,7 +138,7 @@ database="system"
 
 ![add notebook](doc/source/images/configure-connection.png)
 
-### 7. Load data to Netezza
+### 8. Load data to Netezza
 
 We will be loading the `energy_price.csv` file to Netezza using `external table` feature of Netezza. First we create the table and load csv file directly to Netezza like below:
 
@@ -167,7 +175,7 @@ with con.cursor() as cursor:
 
 ```
 
-### 8. Visualize energy price data
+### 9. Visualize energy price data
 
 In this part of the notebook, we will be exploring the data, datatypes and correlation between different columns with `price`. You can run the cell on this part step by step. The overall graph group by dates is shown below:
 
@@ -183,7 +191,7 @@ Similarly, you can see the correlation between individual columns (temperature, 
 ![Visualize energy data](doc/source/images/vis-energy-data-2.png)
 
 
-### 9. Analyze energy price data
+### 10. Analyze energy price data
 
 In-database analytic functions such as `summary1000` and `cov` lets you analyze your data. It automatically give you statistical analysis of each columns. The `summary1000` function gives you statistics like distinct values, average, variance, standard deviation etc. as shown below
 
@@ -207,7 +215,7 @@ Also you can call `nza..COV` function to get the covariance. Below code show the
     pd.read_sql('select * from PRICE_TEMP_ANALYSIS', con)
 ```
 
-### 10. Create machine learning model using timeseries algorithm
+### 11. Create machine learning model using timeseries algorithm
 
 * First we will cleanup the training data set. Since we are using time sereies algorithm, the timestamp column will have to converted to date format to represent each day and use the `row id` as the unique id.
 
