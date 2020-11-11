@@ -30,16 +30,16 @@ In this code pattern, we will be using energy price dataset and analyze the data
 
 ## Steps
 1. [Clone the repo](#1-clone-the-repo)
-1. [Create a new project in CP4D](#1-create-a-new-project-in-cp4d)
-1. [Add connection to Netezza server](#2-add-connection-to-netezza-server)
-1. [Upload data assets](#3-upload-data-assets)
-1. [Load notebook to your project](#4-load-notebook-to-your-project)
-1. [Install NZPY](#5-install-NZPY)
-1. [Configure NPS connection in notebook](#6-configure-NPS-connection-in-notebook)
-1. [Load data to Netezza](#7-load-data-to-netezza)
-1. [Visualize energy price data](#8-visualize-energy-price-data)
-1. [Analyze energy price data](#9-analyze-energy-price-data)
-1. [Create machine learning model using timeseries algorithm](#10-create-machine-learning-model-using-timeseries-algorithm)
+1. [Create a new project in CP4D](#2-create-a-new-project-in-cp4d)
+1. [Add connection to Netezza server](#3-add-connection-to-netezza-server)
+1. [Upload data assets](#4-upload-data-assets)
+1. [Load notebook to your project](#5-load-notebook-to-your-project)
+1. [Install NZPY](#6-install-NZPY)
+1. [Configure NPS connection in notebook](#7-configure-NPS-connection-in-notebook)
+1. [Load data to Netezza](#8-load-data-to-netezza)
+1. [Visualize energy price data](#9-visualize-energy-price-data)
+1. [Analyze energy price data](#10-analyze-energy-price-data)
+1. [Create machine learning model using timeseries algorithm](#11-create-machine-learning-model-using-timeseries-algorithm)
 
 ### 1. Clone the repo
 
@@ -64,10 +64,6 @@ Then, choose `Analytics project`, and select `Create empty project`, provide the
 
 
 ### 3. Add connection to Netezza server
-
-There are two ways you can add connection to the notebook.  Use one of the ways to add connection to NPS.
-
-#### Adding connection using CPD
 
 * From the project page select, `Add to project +`, choose `Connection`
 
