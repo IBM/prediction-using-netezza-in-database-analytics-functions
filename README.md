@@ -4,9 +4,9 @@ In this code pattern, we will learn about how users and developers interested in
 
 Netezza has in-database Analytics packages for mining the spectrum of data set sizes. IBM Netezza In-Database Analytics is a data mining application that includes many of the key techniques and popular real-world algorithms used with data sets.
 
-In this code pattern, we will load Jupyter notebook using IBM Cloud Pak for Data (CP4D) platform. The notebook has steps to connect to Netezza and use In-Database analytic functions to analyze the data and also run machine learning algorithms which allows you to predict and forecast data. In order to access analytical functions of Netezza, you should install `INZA` module into the Netezza server. All of the analytical functions are under `INZA` schema AND `NZA` database.
+In this code pattern, we will load Jupyter notebook using IBM Cloud Pak for Data platform. The notebook has steps to connect to Netezza and use In-Database analytic functions to analyze the data and also run machine learning algorithms which allows you to predict and forecast data. In order to access analytical functions of Netezza, you should install `INZA` module into the Netezza server. All of the analytical functions are under `INZA` schema AND `NZA` database.
 
-In this code pattern, we will be using energy price dataset and analyze the data using Jupyter Notebook using IBM Cloud Pak for Data (CP4D) platform. We will walk you through step by step on:
+In this code pattern, we will be using energy price dataset and analyze the data using Jupyter Notebook using IBM Cloud Pak for Data platform. We will walk you through step by step on:
 
 1. Analyzing data using Netezza In-Database analytic functions.
 1. Creating machine learning models using Netezza In-Database machine learning algorithms.
@@ -30,7 +30,7 @@ In this code pattern, we will be using energy price dataset and analyze the data
 
 ## Steps
 1. [Clone the repo](#1-clone-the-repo)
-1. [Create a new project in CP4D](#2-create-a-new-project-in-cp4d)
+1. [Create a new project in Cloud Pak for Data](#2-create-a-new-project-in-cloud-pak-for-data)
 1. [Add connection to Netezza server](#3-add-connection-to-netezza-server)
 1. [Upload data assets](#4-upload-data-assets)
 1. [Load notebook to your project](#5-load-notebook-to-your-project)
@@ -48,7 +48,7 @@ git clone https://github.com/IBM/prediction-using-netezza-in-database-analytics-
 
 ```
 
-### 2. Create a new project in CP4D
+### 2. Create a new project in Cloud Pak for Data
 
 * Log into IBM Cloud Pak for Data and create a new project, by selecting `Projects` from hamburger menu and clicking `New Project +`.
 
